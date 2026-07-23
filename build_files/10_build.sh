@@ -20,10 +20,14 @@ cmake -B build \
 ls -lah build/
 
 # Copy binaries to the system path
-cp -r build/bin/* /usr/bin/
+cp -r build/bin/*.so /usr/lib/
+cp build/bin/llama build/bin/llama-cli build/bin/llama-server \
+  build/bin/llama-completion build/bin/llama-tokenize \
+  build/bin/llama-speculative build/bin/llama-tts \
+  /usr/bin
 
 # CLEANUP: Remove source and build tools to keep image size small
 cd ../..
-rm -rf llama.cpp
+# rm -rf llama.cpp
 dnf5 remove -y cmake gcc-c++ make vulkan-devel glslc spirv-tools spirv-headers-devel
 dnf5 clean all
