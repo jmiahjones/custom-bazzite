@@ -13,7 +13,8 @@ dnf5 copr enable @caddy/caddy
 dnf5 install -y \
   rocm-smi \
   podman-compose caddy \
-  git cmake gcc-c++ make vulkan-devel glslc spirv-tools spirv-headers-devel \
-  # also install other fun things
-  incus qemu-kvm virt-manager
+  git cmake gcc-c++ make vulkan-devel glslc spirv-tools spirv-headers-devel
+
+# also install other fun things
+dnf5 install -y  incus qemu-kvm virt-manager
 
