@@ -16,5 +16,5 @@ dnf5 install -y \
   git cmake gcc-c++ make vulkan-devel glslc spirv-tools spirv-headers-devel
 
 # also install other fun things
-dnf5 install -y  incus qemu-kvm virt-manager
+dnf5 install -y  incus incus-agent qemu-kvm qemu-img virt-manager
 
