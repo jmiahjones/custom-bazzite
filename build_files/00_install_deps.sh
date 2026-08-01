@@ -11,10 +11,7 @@ dnf5 copr enable @caddy/caddy
 
 ### Install packages
 dnf5 install -y \
-  rocm-smi \
+  rocm-smi fish \
   podman-compose caddy \
-  git cmake gcc-c++ make vulkan-devel glslc spirv-tools spirv-headers-devel
-
-# also install other fun things
-dnf5 install -y  incus incus-agent qemu-kvm qemu-img virt-manager
-
+  git \
+  incus incus-agent qemu-kvm qemu-img virt-manager

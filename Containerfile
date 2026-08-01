@@ -12,12 +12,6 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
     /ctx/00_install_deps.sh
 
-RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
-    --mount=type=cache,dst=/var/cache \
-    --mount=type=cache,dst=/var/log \
-    --mount=type=tmpfs,dst=/tmp \
-    /ctx/10_build.sh
-
 FROM base as built
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
